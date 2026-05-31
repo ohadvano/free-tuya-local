@@ -6,7 +6,7 @@ We believe that open-source software should serve everyone equally, free from ho
 
 ---
 
-![logo](custom_components/tuya_local/brand/icon.svg) 
+![logo](custom_components/tuya_local/brand/icon.png)
 
 Please report any [issues](https://github.com/ohadvano/free-tuya-local/issues) and feel free to raise [pull requests](https://github.com/ohadvano/free-tuya-local/pulls).
 [Many others](https://github.com/ohadvano/free-tuya-local/blob/main/ACKNOWLEDGEMENTS.md) have contributed their help already.
