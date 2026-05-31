@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "Konfigurieren Sie Ihr Tuya Local-Gerät",
+                "title": "Konfigurieren Sie Ihr Free Tuya Local-Gerät",
                 "description": "Geräte können entweder manuell oder cloudgestützt mit Hilfe der SmartLife App hinzugefügt werden.",
                 "data": {
                     "setup_mode": "Setup-Auswahl:"
@@ -33,7 +33,7 @@
                 "description": "{device_name}Die Tuya-Cloud stellt keine lokalen IP-Adressen bereit"
             },
             "local": {
-                "title": "Konfigurieren Sie Ihr Tuya Local-Gerät",
+                "title": "Konfigurieren Sie Ihr Free Tuya Local-Gerät",
                 "description": "{device_name}[Folgen Sie diesen Anweisungen, um Ihre Geräte-ID und Ihren lokalen Schlüssel zu finden.]({device_details_url})",
                 "data": {
                     "host": "IP-Adresse oder Host-Name",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "Konfigurieren Sie Ihr Tuya Local Gerät",
+                "title": "Konfigurieren Sie Ihr Free Tuya Local Gerät",
                 "description": "[Folgen Sie diesen Anweisungen, um Ihren lokalen Schlüssel zu finden.]({device_details_url})",
                 "data": {
                     "host": "IP-Adresse oder Host-Name",

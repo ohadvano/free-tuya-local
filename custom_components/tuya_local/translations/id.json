@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "Konfigurasikan perangkat Tuya Local Anda",
+                "title": "Konfigurasikan perangkat Free Tuya Local Anda",
                 "description": "Perangkat dapat ditambahkan secara manual atau dibantu cloud dengan bantuan aplikasi SmartLife.",
                 "data": {
                     "setup_mode": "Pilihan pengaturan:"
@@ -33,7 +33,7 @@
                 "description": "{device_name}Tuya cloud tidak menyediakan alamat IP lokal jadi sekarang kami harus mencari di jaringan lokal Anda untuk menemukan perangkat. "
             },
             "local": {
-                "title": "Konfigurasikan perangkat Tuya Local Anda",
+                "title": "Konfigurasikan perangkat Free Tuya Local Anda",
                 "description": "{device_name}[Ikuti petunjuk ini untuk menemukan ID perangkat dan kunci lokal.]({device_details_url})",
                 "data": {
                     "host": "Alamat IP atau nama hos",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "Konfigurasikan perangkat Tuya Local Anda",
+                "title": "Konfigurasikan perangkat Free Tuya Local Anda",
                 "description": "[Ikuti petunjuk ini untuk menemukan ID perangkat dan kunci lokal.]({device_details_url})",
                 "data": {
                     "host": "Alamat IP atau nama hos",

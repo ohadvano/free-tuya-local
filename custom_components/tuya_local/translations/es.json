@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "Configura tu dispositivo Tuya Local",
+                "title": "Configura tu dispositivo Free Tuya Local",
                 "description": "Los dispositivos se pueden agregar manualmente o con la ayuda de la nube con la ayuda de la aplicación SmartLife.",
                 "data": {
                     "setup_mode": "Elección de configuración:"
@@ -33,7 +33,7 @@
                 "description": "{device_name}Tuya Cloud no proporciona direcciones IP locales por lo que ahora debemos buscar en su red local para encontrar el dispositivo. "
             },
             "local": {
-                "title": "Configura tu dispositivo Tuya Local",
+                "title": "Configura tu dispositivo Free Tuya Local",
                 "description": "{device_name}[Siga estas instrucciones para encontrar la identificación de su dispositivo y la clave local.]({device_details_url})",
                 "data": {
                     "host": "Dirección IP o nombre de host",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "Configura tu dispositivo Tuya Local",
+                "title": "Configura tu dispositivo Free Tuya Local",
                 "description": "[Siga estas instrucciones para encontrar su clave local.]({device_details_url})",
                 "data": {
                     "host": "Dirección IP o nombre de host",
