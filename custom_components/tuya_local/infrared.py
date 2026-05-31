@@ -19,7 +19,7 @@ _LOGGER = logging.getLogger(__name__)
 
 
 async def async_setup_entry(hass, entry, async_add_entities):
-    """Set up the Tuya Local infrared control platform."""
+    """Set up the Free Tuya Local infrared control platform."""
     config = {**entry.data, **entry.options}
     await async_tuya_setup_platform(
         hass,
@@ -31,7 +31,7 @@ async def async_setup_entry(hass, entry, async_add_entities):
 
 
 class TuyaLocalInfrared(TuyaLocalEntity, InfraredEntity):
-    """Representation of a Tuya Local infrared control device."""
+    """Representation of a Free Tuya Local infrared control device."""
 
     def __init__(self, device: TuyaLocalDevice, config: TuyaEntityConfig):
         """Initialize the infrared control device."""
