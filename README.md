@@ -308,7 +308,7 @@ learned by the `remote` entity to any `infrared` emitter (including non-Tuya one
 
 If you would like to expose the learnt commands as buttons in the user interface
 you might want to take a look at the [Remote buttons](https://github.com/kongo09/remote_buttons)
-integration, which is compatible with Tuya Local.
+integration, which is compatible with Free Tuya Local.
 
 ## Contributing
 
