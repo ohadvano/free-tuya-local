@@ -1,4 +1,4 @@
-"""Services for Tuya Local integration."""
+"""Services for Free Tuya Local integration."""
 
 import asyncio
 import logging
@@ -28,7 +28,7 @@ _LOGGER = logging.getLogger(__name__)
 
 
 async def async_setup_services(hass: HomeAssistant, entities: list[str]):
-    """Set up services for the Tuya Local integration."""
+    """Set up services for the Free Tuya Local integration."""
     if "remote" in entities:
         service.async_register_platform_entity_service(
             hass,
@@ -46,7 +46,7 @@ async def async_handle_send_ir_command(entity, call: ServiceCall):
     _LOGGER.info("Sending saved remote command: %s", call.data)
 
     if not isinstance(entity, TuyaLocalRemote):
-        raise ValueError("Entity must be a tuya-local remote")
+        raise ValueError("Entity must be a free-tuya-local remote")
     if not entity._storage_loaded:
         await entity._async_load_storage()
 

@@ -1,5 +1,5 @@
 """
-Common functionality for Tuya Local entities
+Common functionality for Free Tuya Local entities
 """
 
 import json
