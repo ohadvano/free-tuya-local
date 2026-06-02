@@ -60,6 +60,7 @@ jobs:
         if: steps.check.outputs.needs_sync == 'true'
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+          GH_REPO: ${{ github.repository }} # ◄— ADD THIS LINE
         run: |
           if [ "${{ steps.prep.outputs.clean }}" = "true" ]; then
             title="Sync from upstream"
