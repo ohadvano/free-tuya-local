@@ -1,0 +1,97 @@
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate GitHub App Token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.generate-token.outputs.token }}
+          persist-credentials: true
+
+      - name: Configure git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch upstream
+        run: |
+          git remote add upstream https://github.com/make-all/tuya-local.git
+          git fetch upstream main
+
+      - name: Check for new upstream commits
+        id: check
+        run: |
+          if git merge-base --is-ancestor upstream/main HEAD; then
+            echo "Up-to-date with upstream — nothing to sync."
+            echo "needs_sync=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "needs_sync=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Prepare sync branch
+        if: steps.check.outputs.needs_sync == 'true'
+        id: prep
+        run: |
+          git checkout -B sync/upstream origin/main
+          if git merge --no-ff upstream/main -m "Sync from upstream/main"; then
+            echo "Clean merge."
+            echo "clean=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Merge conflicts — committing markers for manual review."
+            git add -A
+            git commit -m "Sync from upstream/main (CONFLICTS — manual resolution required)"
+            echo "clean=false" >> "$GITHUB_OUTPUT"
+          fi
+          git push origin sync/upstream --force-with-lease
+
+      - name: Open or update PR
+        if: steps.check.outputs.needs_sync == 'true'
+        env:
+          APP_TOKEN: ${{ steps.generate-token.outputs.token }} # ◄— App token for authoring
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # ◄— Default token for approving
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if [ "${{ steps.prep.outputs.clean }}" = "true" ]; then
+            title="Sync from upstream"
+            body="Automated sync from make-all/tuya-local. Auto-merge enabled — will merge once required CI checks pass."
+          else
+            title="Sync from upstream (CONFLICTS)"
+            body=$'Automated sync from make-all/tuya-local hit merge conflicts.\n\nCheck out `sync/upstream`, resolve the conflict markers, force-push, then merge manually.'
+          fi
+
+          # Find or create the PR using the GitHub App Identity
+          number=$(GH_TOKEN="$APP_TOKEN" gh pr list --head sync/upstream --base main --state open --json number --jq '.[0].number // empty')
+          if [ -z "$number" ]; then
+            number=$(GH_TOKEN="$APP_TOKEN" gh pr create --title "$title" --body "$body" --base main --head sync/upstream | grep -oE '[0-9]+$')
+          else
+            GH_TOKEN="$APP_TOKEN" gh pr edit "$number" --title "$title" --body "$body"
+          fi
+
+          # If the branch merged cleanly, bypass approvals and activate auto-merge
+          if [ "${{ steps.prep.outputs.clean }}" = "true" ]; then
+
+            # 1. Approve the PR using the distinct GITHUB_TOKEN identity
+            GH_TOKEN="$GITHUB_TOKEN" gh pr review "$number" --approve
+
+            # 2. Arm the auto-merge engine using the App token
+            GH_TOKEN="$APP_TOKEN" gh pr merge "$number" --auto --merge
+          fi

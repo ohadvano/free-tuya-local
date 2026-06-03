@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "Configure your Tuya Local device",
+                "title": "Configure your Free Tuya Local device",
                 "description": "Devices can either be added manually or cloud-assisted with the help of the SmartLife app.",
                 "data": {
                     "setup_mode": "Setup choice:"
@@ -30,10 +30,10 @@
             },
             "search": {
                 "title": "Locate the device IP address",
-                "description": "{device_name}Tuya cloud does not provide local IP addresses so we must now search your local network to find the device. This takes up to 20 seconds.\n\nIf unsuccessful you will need to provide the IP address yourself some other way such as from router DHCP assignment.\n\nFor this step and the following device addition to succeed you must shut down the mobile app or its connections to the device will often block Tuya Local communication with them."
+                "description": "{device_name}Tuya cloud does not provide local IP addresses so we must now search your local network to find the device. This takes up to 20 seconds.\n\nIf unsuccessful you will need to provide the IP address yourself some other way such as from router DHCP assignment.\n\nFor this step and the following device addition to succeed you must shut down the mobile app or its connections to the device will often block Free Tuya Local communication with them."
             },
             "local": {
-                "title": "Configure your Tuya Local device",
+                "title": "Configure your Free Tuya Local device",
                 "description": "{device_name}[Follow these instructions to find your device id and local key.]({device_details_url})",
                 "data": {
                     "host": "IP address or hostname",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "Configure your Tuya Local device",
+                "title": "Configure your Free Tuya Local device",
                 "description": "[Follow these instructions to find your local key.]({device_details_url})",
                 "data": {
                     "host": "IP address or hostname",

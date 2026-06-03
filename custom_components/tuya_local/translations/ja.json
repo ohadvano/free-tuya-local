@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "Tuya Localのデバイスを設定する",
+                "title": "Free Tuya Localのデバイスを設定する",
                 "description": "デバイスは手動で追加することも、SmartLife アプリを使用してクラウド支援で追加することもできます。",
                 "data": {
                     "setup_mode": "セットアップの選択:"
@@ -33,7 +33,7 @@
                 "description": "{device_name}Tuya クラウドはローカル IP アドレスを提供しないため、ローカル ネットワークを検索してデバイスを見つける必要があります。"
             },
             "local": {
-                "title": "Tuya Localのデバイスを設定する",
+                "title": "Free Tuya Localのデバイスを設定する",
                 "description": "{device_name}[これらの手順に従ってデバイスIDとローカルキーを見つけてください。]({device_details_url})",
                 "data": {
                     "host": "IPアドレスまたはホスト名",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "Tuya Localのデバイスを設定する",
+                "title": "Free Tuya Localのデバイスを設定する",
                 "description": "[これらの手順に従ってデバイスIDとローカルキーを見つけてください。]({device_details_url})",
                 "data": {
                     "host": "IPアドレスまたはホスト名",

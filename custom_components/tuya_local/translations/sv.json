@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "Konfigurera din Tuya Local-enhet",
+                "title": "Konfigurera din Free Tuya Local-enhet",
                 "description": "Enheter kan antingen läggas till manuellt eller cloud-assisterat med hjälp av SmartLife-appen.",
                 "data": {
                     "setup_mode": "Installationsval:"
@@ -30,10 +30,10 @@
             },
             "search": {
                 "title": "Leta upp enhetens IP-adress",
-                "description": "{device_name}Tuya cloud tillhandahåller inte lokala IP-adresser så vi måste nu söka i ditt lokala nätverk för att hitta enheten. Detta tar upp till 20 sekunder.\n\nOm det misslyckas måste du själv tillhandahålla IP-adressen på något annat sätt, till exempel från routerns DHCP-tilldelning.\n\nFör att detta steg och den följande enhetsläggningen ska lyckas måste du stänga mobilappen eller dess anslutningar till enheten kommer ofta blockera Tuya Local-kommunikation med dem."
+                "description": "{device_name}Tuya cloud tillhandahåller inte lokala IP-adresser så vi måste nu söka i ditt lokala nätverk för att hitta enheten. Detta tar upp till 20 sekunder.\n\nOm det misslyckas måste du själv tillhandahålla IP-adressen på något annat sätt, till exempel från routerns DHCP-tilldelning.\n\nFör att detta steg och den följande enhetsläggningen ska lyckas måste du stänga mobilappen eller dess anslutningar till enheten kommer ofta blockera Free Tuya Local-kommunikation med dem."
             },
             "local": {
-                "title": "Konfigurera din Tuya Local-enhet",
+                "title": "Konfigurera din Free Tuya Local-enhet",
                 "description": "{device_name}[Följ dessa instruktioner för att hitta ditt enhets-ID och lokala nyckel.]({device_details_url})",
                 "data": {
                     "host": "IP-adress eller värdnamn",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "Konfigurera din Tuya Local-enhet",
+                "title": "Konfigurera din Free Tuya Local-enhet",
                 "description": "[Följ dessa instruktioner för att hitta din lokala nyckel.]({device_details_url})",
                 "data": {
                     "host": "IP-adress eller värdnamn",

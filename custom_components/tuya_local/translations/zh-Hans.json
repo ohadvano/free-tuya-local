@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "配置您的Tuya Local设备",
+                "title": "配置您的Free Tuya Local设备",
                 "description": "您可以手动添加设备，或通过SmartLife应用的云服务辅助添加。",
                 "data": {
                     "setup_mode": "设置选项:"
@@ -30,10 +30,10 @@
             },
             "search": {
                 "title": "定位设备IP地址",
-                "description": "{device_name}Tuya云不提供本地IP地址，因此我们现在必须搜索您的本地网络以找到设备。这需要最多20秒。\n\n如果搜索不成功，您需要通过其他方式提供IP地址，例如从路由器的DHCP分配中获取。\n\n为了使这一步骤和后续的设备添加成功，您必须关闭移动应用，否则其连接会阻止Tuya Local与设备的通信。"
+                "description": "{device_name}Tuya云不提供本地IP地址，因此我们现在必须搜索您的本地网络以找到设备。这需要最多20秒。\n\n如果搜索不成功，您需要通过其他方式提供IP地址，例如从路由器的DHCP分配中获取。\n\n为了使这一步骤和后续的设备添加成功，您必须关闭移动应用，否则其连接会阻止Free Tuya Local与设备的通信。"
             },
             "local": {
-                "title": "配置您的Tuya Local设备",
+                "title": "配置您的Free Tuya Local设备",
                 "description": "{device_name}[按照这些说明找到您的设备ID和 Local key]({device_details_url})",
                 "data": {
                     "host": "IP地址或主机名",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "配置您的Tuya Local设备",
+                "title": "配置您的Free Tuya Local设备",
                 "description": "[按照这些说明找到您的 Local key]({device_details_url})",
                 "data": {
                     "host": "IP地址或主机名",

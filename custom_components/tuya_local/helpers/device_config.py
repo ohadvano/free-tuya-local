@@ -1,5 +1,5 @@
 """
-Config parser for Tuya Local devices.
+Config parser for Free Tuya Local devices.
 """
 
 import logging
@@ -96,7 +96,7 @@ def to_signed(val, bits):
 
 
 class TuyaDeviceConfig:
-    """Representation of a device config for Tuya Local devices."""
+    """Representation of a device config for Free Tuya Local devices."""
 
     def __init__(self, fname):
         """Initialize the device config.

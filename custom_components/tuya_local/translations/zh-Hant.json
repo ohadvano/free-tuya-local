@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "配置您的Tuya Local設備",
+                "title": "配置您的Free Tuya Local設備",
                 "description": "您可以手動新增設備，或透過SmartLife應用的雲端服務輔助添加。",
                 "data": {
                     "setup_mode": "設定選項:"
@@ -30,10 +30,10 @@
             },
             "search": {
                 "title": "定位設備IP位址",
-                "description": "{device_name}Tuya雲端不提供本地IP位址，因此我們現在必須搜尋您的本地網路以找到裝置。這需要最多20秒。 \n\n如果搜尋不成功，您需要透過其他方式提供IP位址，例如從路由器的DHCP分配中取得。 \n\n為了使此步驟和後續的裝置新增成功，您必須關閉行動應用，否則其連線會阻止Tuya Local與裝置的通訊。"
+                "description": "{device_name}Tuya雲端不提供本地IP位址，因此我們現在必須搜尋您的本地網路以找到裝置。這需要最多20秒。 \n\n如果搜尋不成功，您需要透過其他方式提供IP位址，例如從路由器的DHCP分配中取得。 \n\n為了使此步驟和後續的裝置新增成功，您必須關閉行動應用，否則其連線會阻止Free Tuya Local與裝置的通訊。"
             },
             "local": {
-                "title": "配置您的Tuya Local設備",
+                "title": "配置您的Free Tuya Local設備",
                 "description": "{device_name}[請按照這些說明找到您的裝置ID和 Local key]({devide_details_url})",
                 "data": {
                     "host": "IP位址或主機名",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "配置您的Tuya Local設備",
+                "title": "配置您的Free Tuya Local設備",
                 "description": "[請按照這些說明找到您的 Local key]({devide_details_url})",
                 "data": {
                     "host": "IP位址或主機名",
