@@ -2,7 +2,7 @@
     "config": {
         "step": {
             "user": {
-                "title": "Configureu el vostre dispositiu Tuya Local",
+                "title": "Configureu el vostre dispositiu Free Tuya Local",
                 "data": {
                     "setup_mode": "Opció de configuració:"
                 },
@@ -29,10 +29,10 @@
             },
             "search": {
                 "title": "Localitzeu l'adreça IP del dispositiu",
-                "description": "{device_name}Tuya cloud no proporciona adreces IP locals, per tant, ara hem de cercar a la vostra xarxa local per a trobar el dispositiu. Això triga fins a 20 segons.\n\nSi no teniu èxit, haureu de proporcionar l'adreça IP vós mateix d'alguna altra manera, com ara des de l'assignació DHCP de l'encaminador.\n\nPer a aquest pas i que pugueu afegir amb èxit el dispositiu, heu de tancar l'aplicació mòbil o les seves connexions al dispositiu sovint bloquejarà la comunicació Tuya Local amb ells."
+                "description": "{device_name}Tuya cloud no proporciona adreces IP locals, per tant, ara hem de cercar a la vostra xarxa local per a trobar el dispositiu. Això triga fins a 20 segons.\n\nSi no teniu èxit, haureu de proporcionar l'adreça IP vós mateix d'alguna altra manera, com ara des de l'assignació DHCP de l'encaminador.\n\nPer a aquest pas i que pugueu afegir amb èxit el dispositiu, heu de tancar l'aplicació mòbil o les seves connexions al dispositiu sovint bloquejarà la comunicació Free Tuya Local amb ells."
             },
             "local": {
-                "title": "Configureu el vostre dispositiu Tuya Local",
+                "title": "Configureu el vostre dispositiu Free Tuya Local",
                 "description": "{device_name}[Seguiu aquestes instruccions per a trobar l'identificador del dispositiu i la clau local.]({device_details_url})",
                 "data": {
                     "host": "Adreça IP o nom d'amfitrió",
@@ -76,7 +76,7 @@
             "does_not_need_hub": "El dispositiu no necessita una passarel·la i se n'ha seleccionat una. Reviseu les vostres opcions."
         }
     },
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "selector": {
         "setup_mode": {
             "options": {
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "Configureu el vostre dispositiu Tuya Local",
+                "title": "Configureu el vostre dispositiu Free Tuya Local",
                 "data": {
                     "host": "Adreça IP o nom d'amfitrió",
                     "local_key": "Clau local",
@@ -109,7 +109,7 @@
     "services": {
         "send_learned_ir_command": {
             "name": "Enviar comando IR aprendido",
-            "description": "Envía un comando IR que ha sido aprendido por un dispositivo Tuya Local compatible.",
+            "description": "Envía un comando IR que ha sido aprendido por un dispositivo Free Tuya Local compatible.",
             "fields": {
                 "emitter_entity_id": {
                     "name": "Emisor",

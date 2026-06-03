@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "Configurează dispozitivul Tuya Local",
+                "title": "Configurează dispozitivul Free Tuya Local",
                 "description": "Dispozitivele pot fi adăugate manual sau prin cloud cu ajutorul aplicației SmartLife.",
                 "data": {
                     "setup_mode": "Mod de configurare:"
@@ -30,10 +30,10 @@
             },
             "search": {
                 "title": "Localizați adresa IP a dispozitivului",
-                "description": "{device_name}Cloud-ul Tuya nu oferă adrese IP locale, așa că trebuie căutat dispozitivul în rețeaua locală. Aceasta poate dura până la 20 de secunde.\n\nDacă nu reușește, va trebui să furnizați adresa IP prin alte metode, cum ar fi din atribuirea DHCP a routerului.\n\nPentru ca acest pas și următoarea adăugare a dispozitivului să reușească, trebuie să închideți aplicația mobilă, altfel conexiunile acesteia pot bloca comunicarea Tuya Local."
+                "description": "{device_name}Cloud-ul Tuya nu oferă adrese IP locale, așa că trebuie căutat dispozitivul în rețeaua locală. Aceasta poate dura până la 20 de secunde.\n\nDacă nu reușește, va trebui să furnizați adresa IP prin alte metode, cum ar fi din atribuirea DHCP a routerului.\n\nPentru ca acest pas și următoarea adăugare a dispozitivului să reușească, trebuie să închideți aplicația mobilă, altfel conexiunile acesteia pot bloca comunicarea Free Tuya Local."
             },
             "local": {
-                "title": "Configurează dispozitivul Tuya Local",
+                "title": "Configurează dispozitivul Free Tuya Local",
                 "description": "{device_name}[Urmați aceste instrucțiuni pentru a găsi device id și local key.]({device_details_url})",
                 "data": {
                     "host": "Adresă IP sau hostname",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "Configurează dispozitivul Tuya Local",
+                "title": "Configurează dispozitivul Free Tuya Local",
                 "description": "[Urmați aceste instrucțiuni pentru a găsi cheia locală.]({device_details_url})",
                 "data": {
                     "host": "Adresă IP sau hostname",

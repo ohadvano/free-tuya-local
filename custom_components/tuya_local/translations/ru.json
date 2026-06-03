@@ -1,9 +1,9 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
-                "title": "Настройка устройства Tuya Local",
+                "title": "Настройка устройства Free Tuya Local",
                 "description": "Устройства можно добавлять вручную или через облако с помощью приложения SmartLife.",
                 "data": {
                     "setup_mode": "Выбор установки:"
@@ -33,7 +33,7 @@
                 "description": "{device_name}Облако Tuya не предоставляет локальные IP-адреса"
             },
             "local": {
-                "title": "Настройка устройства Tuya Local",
+                "title": "Настройка устройства Free Tuya Local",
                 "description": "{device_name}[Следуйте этим инструкциям, чтобы найти идентификатор устройства и локальный ключ.]({device_details_url})",
                 "data": {
                     "host": "IP-адрес или имя хоста",
@@ -89,7 +89,7 @@
     "options": {
         "step": {
             "user": {
-                "title": "Настройка устройства Tuya Local",
+                "title": "Настройка устройства Free Tuya Local",
                 "description": "[Следуйте этим инструкциям, чтобы найти идентификатор устройства и локальный ключ.]({device_details_url})",
                 "data": {
                     "host": "IP-адрес или имя хоста",

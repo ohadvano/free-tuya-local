@@ -1,5 +1,5 @@
 """
-API for Tuya Local devices.
+API for Free Tuya Local devices.
 """
 
 import asyncio

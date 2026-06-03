@@ -1,4 +1,4 @@
-"""Diagnostics support for tuya-local."""
+"""Diagnostics support for free-tuya-local."""
 
 from __future__ import annotations
 
@@ -44,7 +44,7 @@ def _async_get_diagnostics(
     entry: ConfigEntry,
     device: DeviceEntry | None = None,
 ) -> dict[str, Any]:
-    """Return diagnostics for a tuya-local config entry."""
+    """Return diagnostics for a free-tuya-local config entry."""
     hass_data = hass.data[DOMAIN][get_device_id(entry.data)]
     hostname = entry.data.get(CONF_HOST, "")
 
@@ -98,7 +98,7 @@ def redact_entity(
 def _async_device_as_dict(
     hass: HomeAssistant, device: TuyaLocalDevice
 ) -> dict[str, Any]:
-    """Represent a Tuya Local device as a dictionary."""
+    """Represent a Free Tuya Local device as a dictionary."""
 
     # Base device information, without sensitive information
     data = {
