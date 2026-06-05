@@ -98,3 +98,9 @@ jobs:
             # 2. Arm the auto-merge engine using the App token
             GH_TOKEN="$APP_TOKEN" gh pr merge "$number" --auto --merge
           fi
+
+      - name: Trigger native failure notification
+        if: steps.prep.outputs.clean == 'false'
+        run: |
+          echo "::error::Merge conflicts detected. Manual resolution required."
+          exit 1
