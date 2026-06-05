@@ -8,6 +8,8 @@ on:
       - 'custom_components/tuya_local/translations/*.json'
       - 'custom_components/tuya_local/icons.json'
   push:
+    branches:
+      - main
     paths:
       - 'custom_components/tuya_local/translations/*.json'
       - 'custom_components/tuya_local/icons.json'
