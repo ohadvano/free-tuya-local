@@ -475,7 +475,7 @@
 - iHunt 400m³/h and 50m³/h air purifiers
 - Jafanda JF260S and JF500 air purifiers
 - Kilo Plus air purifier
-- Klarta Stor 2 and Forste 4 air purifiers
+- Klarta Stor 2, Stor 3 and Forste 4 air purifiers
 - Kogan 2S and 5 pro air purifiers
 - Lifubide X600 air purifier
 - Meaco Clean CA-HEPA air purifier
@@ -609,7 +609,7 @@
 - Ciarra CBCS4850 range hood
 - Casdon 16J3S dishwasher
 - Casdon KG1 inline water dispenser
-- Casdon TD Pro 2 and T2E ovens
+- Casdon TD Pro 2, TD Pro 3 and T2E ovens
 - Cecofry 5500 Connected air fryer
 - Etna VW644MC dishwasher
 - Fiesta DK-1G smart kettle
