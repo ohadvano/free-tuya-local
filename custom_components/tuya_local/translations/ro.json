@@ -1,5 +1,5 @@
 {
-    "title": "Tuya Local",
+    "title": "Free Tuya Local",
     "config": {
         "step": {
             "user": {
@@ -1144,7 +1144,7 @@
                     "12_hour": "12 ore",
                     "24_hour": "24 ore"
                 }
-            }            
+            }
         },
         "sensor": {
             "ambient_temperature": {
@@ -1539,4 +1539,3 @@
         }
     }
 }
-

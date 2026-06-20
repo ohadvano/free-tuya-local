@@ -1,2 +1,8 @@
 ACKNOWLEDGEMENTS.md merge=union
 DEVICES.md merge=union
+hacs.json merge=keep-my-name
+custom_components/tuya_local/brand/icon.png merge=keep-mine
+custom_components/tuya_local/brand/icon@2x.png merge=keep-mine
+custom_components/tuya_local/brand/icon.svg merge=keep-mine
+custom_components/tuya_local/brand/logo.png merge=keep-mine
+custom_components/tuya_local/brand/logo@2x.png merge=keep-mine
