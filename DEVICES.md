@@ -129,6 +129,7 @@
 - ElectriQ 12WMINV
 - ElectriQ Airflex, EcoSilent models
 - ElectriQ SupremeCool SC16HPW
+- Eurom AC 5201 Caravan and Home air conditioner
 - Fersk Vind 2
 - Fisher Summer air conditioner
 - Fral Super Cool FSC08 WiFi portable air conditioner
@@ -156,6 +157,7 @@
 - Morris WFIN-35168 air conditioner
 - MyCond Berg air conditioner
 - Nedis ACMB1WT12 portable air conditioner
+- Olimpia Splendid Unico Pro air conditioner
 - Qlima SC 7035S and MS-AC 5002 air conditioners
 - Rotenso Roni R35WI and Roni X
 - Royal Clima Fresh air conditioner
@@ -462,6 +464,7 @@
 - Skyfan DC fan with light
 - Smart Mist3 TX-1602MF (ZJ-1522A-WiFi)
 - Smartmi Air Circulating fan
+- Sofucor KBS ceiling fan with light
 - Stirling FS1-40DC pedestal fan
 - Sulion Crixus L ceiling fan with light
 - Temple and Webster Alina ceiling fan
