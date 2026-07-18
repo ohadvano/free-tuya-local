@@ -1290,6 +1290,7 @@ port and password.
 - Holman WX2 dual tap timer
 - Holman WX8 8 sprinkler irrigation controller
 - Inkbird IIC400 irrigation controller
+- Joekol dual pump watering system
 - KRain KRX8 (also KRX6) irrigation controller
 - Neo Coolcam 16 zone sprinkler controller
 - Neo NAS-WV02W water use monitoring valve
@@ -1386,6 +1387,7 @@ port and password.
 - RSE TY-WFH v3.01 gate controller
 - RTCZ-03 human presence sensor
 - Ryakka 7-in-1 smart pool monitor
+- Satisure power outage alarm
 - SD123 HPR01 human presence radar
 - Shrivee triple water timer
 - SNT957W-TDE temperature sensor
