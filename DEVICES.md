@@ -3,7 +3,7 @@
 ### Heaters
 
 - Advanced Fires 1500 electric fireplace
-- Amantii Bespoke R1-2-AP1 fireplace
+- Amantii Bespoke R1-2-AP1 and TRD Lumina fireplaces
 - AMOS CY-B06ERW oil radiator
 - Andersson GSH heater
 - Arlec 2200W and 2400W panel heaters, CEH243HA ceramic heater
@@ -745,6 +745,7 @@
 - AFYEEV 16A 11kW, 32A 7kW and 22kW portable EV chargers
 - Aimiler 11kW 16A and 40A EV chargers
 - Ampbolt Level 1/2 portable EV charger
+- AmperePoint Q series EV chargers
 - dé Wall EV charger (3-phase 22Kw)
 - Demuda 4048/6048 MPPT solar charge controller
 - Dowell iOneAIO EV charger
