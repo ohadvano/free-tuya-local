@@ -600,6 +600,7 @@
 - Eanons QT-JS2014 purifying humidifier
 - Eberg HUMI H03G1 humidifier
 - Eta Noble humidifier
+- Flymoon Top Fill 5L Cool Mist humidifier
 - Homvana H111S humidifier
 - Inkbird IHC-200 humidity controller
 - Klarta Humea and Humea Grande humidifiers
@@ -746,6 +747,7 @@
 - Aimiler 11kW 16A and 40A EV chargers
 - Ampbolt Level 1/2 portable EV charger
 - AmperePoint Q series EV chargers
+- Conow CBE2000 Pro solar battery
 - dé Wall EV charger (3-phase 22Kw)
 - Demuda 4048/6048 MPPT solar charge controller
 - Dowell iOneAIO EV charger
