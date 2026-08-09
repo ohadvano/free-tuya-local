@@ -257,6 +257,7 @@
 - Shuangri SR223 solar water heating controller
 - Sime EcoMaxi VB200 heat pump water heater
 - SolarEast (Adlar Castra) Aurora II heat pump
+- SPT Dark Knight heat pump water heater
 - Tauclima DGN-250 heat pump water heater
 - Thermann R290 heat pump water heater
 - Thermex IF series V pro and Lima 80V hot water systems
@@ -1207,7 +1208,7 @@ port and password.
 - Doel cat litter box
 - Duoqu Neo-A cat litter box
 - Dxophiex fish feeder
-- Els Pet Spaceship pet litter box
+- Els Pet Spaceship and Orbitie pet litter boxes
 - Evergreen Solar bird feeder camera
 - Faroro PF50 pet feeder
 - Faroro TD20 pet treat camera
@@ -1290,7 +1291,7 @@ port and password.
 - ARD-100+ valve controller
 - Aubess Rainpoint TTP106W irrigation system
 - Becasmart BAF-908 irrigation system
-- FrankEver BV05 water valve
+- FrankEver BV05 and other water valves
 - Frizzlife LP365P water monitor shut-off valve
 - Garza Wi-Fi garden irrigation system (ITV103W with 433MHz WiFi hub)
 - Gidrolock Standard water leak detection valve
