@@ -70,7 +70,7 @@
 - Magnum MRC floor heating (2 variants)
 - Mellerware Comfy electric radiator (tested with Medium 1200W)
 - Modern Ember Vibrance XH-BG-15W/30WZKWIFI-10 electric fireplace
-- Modern Flames Orion electric fireplace
+- Modern Flames Orion and Landscape Pro Slim electric fireplaces
 - Nedis ceramic PTC fan heater
 - Nedis convection heater - WIFIHTPL20F model
 - Nutromo SH014 space heater
@@ -234,6 +234,7 @@
 - Envirosun ES330M9 hot water system
 - Ferroli EGEA and Titano Twin water heaters
 - Fisher air to water heat pump
+- Gamp BCV 300 water heat pump
 - Geyserwise TSE1 and MWS Geyser controller kits
 - Giatsu VAW 2 heat pump water heater
 - Haier air-water combo heat pump
@@ -333,7 +334,7 @@
 - Polytherm Polyalpha thermostat
 - ProWarm Touch Button S series underfloor heating controller
 - Psmart T436 thermostat
-- Rhino King XNW-AC 3-speed and Smart AC thermostats
+- Rhino King XNW-AC 3-speed, Smart AC, H7 central HVAC thermostats
 - RYRA TYTE-D1 thermostat with energy monitoring
 - Sajun steam room
 - Salcar T9W thermostat _(likely also Tellur TSH02)_
@@ -1318,6 +1319,7 @@ port and password.
 - Stahlmann Smart water leak control system
 - Sunlary indoor plant watering system
 - Wasserstein AquaPal water monitor
+- WD-01GDE irrigation controller 
 - Zemismart DP-WBS01 8-zone sprinkler controller (also sold as Benexmart and other brands)
 
 ### Miscellaneous
