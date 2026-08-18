@@ -541,7 +541,7 @@
 - Arida S7L-2 dehumidifier
 - Belair Baltic Irradio 20L dehumidifier
 - Cecotec BigDry 4000 dehumidifier
-- Clean Air Optima CA-702 dehumidifier
+- Clean Air Optima CA-702 and CA-707 dehumidifiers
 - Cleverio AD100 dehumidifier
 - Climative DH-20S Cube ION dehumidifier
 - DH-CSK03W dehumidifier
@@ -1305,9 +1305,7 @@ port and password.
 - Gidrolock Standard water leak detection valve
 - Haozee water valve, and 12 valve sprinkler controller
 - Hoenyzy DN15 / DN20 / DN25 gas and water valve timers
-- Holman WX1 tap timer (sprinkler controller)
-- Holman WX2 dual tap timer
-- Holman WX8 8 sprinkler irrigation controller
+- Holman WX1, WX2, WX4, WX8 tap timer (sprinkler controller)
 - Inkbird IIC400 irrigation controller
 - Joekol dual pump watering system
 - KRain KRX8 (also KRX6) irrigation controller
