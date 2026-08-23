@@ -1,17 +1,23 @@
-name: Ceiling fan with light
+name: Ceiling fan
 products:
-  - id: 8tai0lslpwgaexzv
-    manufacturer: Hunter Pacific
-    model: "6 speed"
-  # - id: ftqsaibnb3insvp9
-  #   manufacturer: Fanelite
-  #   model: Manihi
+  - id: mipcgdnh7tlckmrn
+    manufacturer: Lucci
+    model: Air Radar Connect
 entities:
   - entity: fan
+    translation_key: fan_with_presets
     dps:
       - id: 60
         type: boolean
         name: switch
+      - id: 61
+        type: string
+        name: preset_mode
+        mapping:
+          - dps_val: nature
+            value: nature
+          - dps_val: fresh
+            value: fresh
       - id: 62
         type: integer
         name: speed
@@ -26,35 +32,36 @@ entities:
       - id: 20
         type: boolean
         name: switch
-      - id: 21
-        name: work_mode
-        type: string
-        optional: true
       - id: 22
         name: brightness
         type: integer
         range:
           min: 1
-          max: 7
+          max: 100
       - id: 23
         name: color_temp
         type: integer
-        optional: true
         range:
           min: 0
-          max: 1000
+          max: 100
         mapping:
           - target_range:
-              min: 2700
-              max: 6500
-            step: 500
-      - id: 25
-        name: scene_data
-        type: string
-        optional: true
+              min: 3000
+              max: 5000
   - entity: number
-    translation_key: timer
+    name: Light timer
+    category: config
     class: duration
+    dps:
+      - id: 26
+        type: integer
+        name: value
+        unit: s
+        range:
+          min: 0
+          max: 64800
+  - entity: number
+    name: Fan timer
     category: config
     dps:
       - id: 64
@@ -64,20 +71,13 @@ entities:
         range:
           min: 0
           max: 540
-  - entity: light
-    translation_key: backlight
+  - entity: text
+    name: Light control
     category: config
-    hidden: unavailable
+    icon: "mdi:cogs"
+    hidden: true
     dps:
-      - id: 101
-        type: boolean
+      - id: 28
+        type: string
         optional: true
-        name: switch
-      - id: 101
-        type: boolean
-        optional: true
-        name: available
-        mapping:
-          - dps_val: null
-            value: false
-          - value: true
+        name: value
