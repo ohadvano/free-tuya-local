@@ -413,6 +413,9 @@
         "event": {
             "alarm": {
                 "name": "Alarm"
+            },
+            "notification": {
+                "name": "Oznámení"
             }
         },
         "humidifier": {
@@ -792,6 +795,7 @@
                 "state": {
                     "cancel": "Zrušit",
                     "continuous": "Nepřetržitý",
+                    "custom": "Vlastní",
                     "5s": "5 sekund",
                     "10s": "10 sekund",
                     "15s": "15 sekund",

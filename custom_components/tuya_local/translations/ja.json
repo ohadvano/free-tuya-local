@@ -413,6 +413,9 @@
         "event": {
             "alarm": {
                 "name": "アラーム"
+            },
+            "notification": {
+                "name": "通知"
             }
         },
         "humidifier": {
@@ -792,6 +795,7 @@
                 "state": {
                     "cancel": "キャンセル",
                     "continuous": "連続",
+                    "custom": "カスタム",
                     "5s": "5秒",
                     "10s": "10秒",
                     "15s": "15秒",

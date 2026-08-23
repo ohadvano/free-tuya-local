@@ -185,7 +185,7 @@ entities:
           min: 0
           max: 10
         mapping:
-          - scale: 0.1
+          - scale: 10
   - entity: switch
     name: Motion limit area
     category: config
@@ -238,7 +238,7 @@ entities:
         type: boolean
         name: switch
   - entity: event
-    name: Notification
+    translation_key: notification
     dps:
       - id: 212
         type: string

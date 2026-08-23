@@ -413,6 +413,9 @@
         "event": {
             "alarm": {
                 "name": "Alarme"
+            },
+            "notification": {
+                "name": "Notification"
             }
         },
         "humidifier": {
@@ -792,6 +795,7 @@
                 "state": {
                     "cancel": "Annuler",
                     "continuous": "Continu",
+                    "custom": "Personnalisé",
                     "5s": "5 secondes",
                     "10s": "10 secondes",
                     "15s": "15 secondes",

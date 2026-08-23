@@ -30,6 +30,7 @@
 - Ecostrad Accent iQ heating panel
 - Ecostrad iQ ceramic radiators
 - Ecostrad iQ heating elements
+- EF-R Pro electric fireplace
 - ElectriQ MY130 oil radiator
 - Emke Orbrad PTR towel radiator
 - Essentials Smart Home electric bathroom heater
@@ -50,6 +51,7 @@
 - HJZ oil column radiator
 - Hombli radiator controller
 - Imaxfire AWA2 water vapour fireplace
+- In-Ring-R radiator thermostat
 - InkbirdPlus HT2024 space heater
 - INOW Wi-Fi heating element (single and dual air/water temperature control variants)
 - Juskys OH125BW2 oil radiator
@@ -299,7 +301,7 @@
 - ETOP-HP thermostat (CH7100)
 - ETOP-HT thermostat
 - ETOP-HT-CH thermostat (branded as Ferco GN1)
-- ETOP-HT=CH Pro thermostat (branded as PNI CT36 Pro)
+- ETOP-HT-CH Pro thermostat (branded as PNI CT36 Pro)
 - Ettroit LN4102 thermostat
 - Eurom WiFi thermostat
 - Euroster 4040 Smart thermostat
@@ -330,7 +332,7 @@
 - Owon PCT513 thermostat
 - Pilot Wire RP5 bath thermostat
 - Plikc Neve X W/RFW and Neve Pro W thermostats
-- PNI CT45 thermostat
+- PNI CT45, CT400 thermostats
 - Polytherm Polyalpha thermostat
 - ProWarm Touch Button S series underfloor heating controller
 - Psmart T436 thermostat
@@ -428,7 +430,7 @@
 - KCvents VT501-W heat recovery ventilation
 - Kendal KVT-Touchtower pedestal fan
 - Klarstein Airfold, Bolero ceiling fans with light
-- Klarstein Icewind Plus, Skyscraper Ice, Skytower Grand cooling fans
+- Klarstein Icetower, Icewind Plus, Skyscraper Ice, Skytower Grand cooling fans
 - Keyun MKCFE002 RGB chandelier fan
 - Kogan bladeless, 3D oscillating and heating fans
 - Ledkia fan and light controller
@@ -437,6 +439,7 @@
 - Ligency E26 socket ceiling fan with RGBCW light
 - Living Comfort LC310S twin window fan
 - Lucci Connect Wi-Fi fan remote
+- Lucci Air Radar Connect ceiling fan
 - Lumary A1, B2, C2 ceiling fans with lights
 - Magnovent Cefiro ceiling fan with lights
 - Mantra ceiling fan with light
@@ -493,6 +496,7 @@
 ### Air Purifiers
 
 - Alen BreatheSmart 35i and 45i air purifiers
+- AP402 air purifier
 - Arlec APR005HA air purifier
 - AtmosC A Series air purifier
 - Breville Easy Air, Smart Air Connect, Smart Air Viral Protect Plus and Night Glow purifiers
@@ -1137,6 +1141,7 @@ work reliably, even if listed below.
 - Neo Coolcam Siren with temperature and humidity alert (NAS-AB02W)
 - Orion Grid Connect SWS07HA indoor siren
 - Orion Grid Connect outdoor siren (also Elesion NX-4980)
+- Qnect SH-SI01-QNE siren
 - Sirena WS-902 Plus outdoor strobe siren
 - STL siren
 
@@ -1271,7 +1276,7 @@ port and password.
 - Rojeco V200 DU3L-VS camera pet feeder
 - Sailesi self-cleaning litter box
 - Sobralik pet fountain
-- Tesla Smart pet feeder
+- Tesla Smart fish and pet feeders
 - Ti Pro25 cat litter box
 - Tonepie T1PRO cat litter box
 - Tonepie T1 Pro MAX cat litter box
