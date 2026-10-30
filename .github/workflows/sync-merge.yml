@@ -1,0 +1,93 @@
+name: Fast-forward upstream sync
+
+on:
+  workflow_run:
+    workflows:
+      - Validate with HACS
+      - Validate with hassfest
+      - Translation tests
+      - Linting
+      - Python tests
+      - YAML tests
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: read
+  checks: read
+
+concurrency:
+  group: sync-fast-forward
+  cancel-in-progress: false
+
+jobs:
+  fast-forward:
+    if: github.event.workflow_run.head_branch == 'sync/upstream'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate GitHub App Token
+        id: generate-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ steps.generate-token.outputs.token }}
+          persist-credentials: true
+
+      - name: Fetch upstream
+        run: |
+          git remote add upstream https://github.com/make-all/tuya-local.git
+          git fetch upstream main
+
+      - name: Fast-forward main once all checks pass
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_REPO: ${{ github.repository }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          if [ "$(git rev-parse origin/sync/upstream)" != "$SHA" ]; then
+            echo "sync/upstream has moved on from $SHA — nothing to do."
+            exit 0
+          fi
+
+          # A conflicted sync leaves plain upstream on the branch; never put that on main
+          if git merge-base --is-ancestor "$SHA" upstream/main; then
+            echo "sync/upstream holds no fork changes (unresolved conflicts) — not touching main."
+            exit 0
+          fi
+
+          if [ -z "$(gh pr list --head sync/upstream --base main --state open --json number --jq '.[0].number // empty')" ]; then
+            echo "No open sync PR — nothing to do."
+            exit 0
+          fi
+
+          checks=$(gh api --paginate "repos/$GH_REPO/commits/$SHA/check-runs" \
+            --jq '.check_runs[] | select(.name != "fast-forward") | "\(.name)|\(.status)|\(.conclusion)"')
+          echo "$checks"
+
+          if echo "$checks" | grep -qv '|completed|'; then
+            echo "Checks still running — a later run will finish the job."
+            exit 0
+          fi
+          if echo "$checks" | grep -vqE '\|(success|skipped|neutral)$'; then
+            echo "::error::Checks failed for $SHA — main left unchanged."
+            exit 1
+          fi
+          if ! echo "$checks" | grep -q '^lint|completed|success$'; then
+            echo "Lint has not run on $SHA yet — waiting."
+            exit 0
+          fi
+
+          # Don't drop commits that landed on main after this sync was prepared
+          if [ "$(git log -1 --format=%ct origin/main)" -gt "$(git log -1 --format=%ct "$SHA")" ]; then
+            echo "::error::main changed after $SHA was prepared — rerun the sync."
+            exit 1
+          fi
+
+          # The PR is marked as merged automatically once its head is on main
+          git push --force origin "$SHA:refs/heads/main"

@@ -1,0 +1,100 @@
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate GitHub App Token
+        id: generate-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ steps.generate-token.outputs.token }}
+          persist-credentials: true
+
+      - name: Configure git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # During a rebase %A is the upstream version and %B is the fork's version
+          git config --global merge.keep-my-name.driver 'sed -i "s/\"name\": *\"[^\"]*\"/\"name\": \"Free Tuya Local\"/" %A'
+          git config --global merge.keep-mine.driver 'cp %B %A'
+
+          # Upstream has its own .gitattributes, so pin the fork's merge attributes for the rebase
+          cp .gitattributes .git/info/attributes
+
+      - name: Fetch upstream
+        run: |
+          git remote add upstream https://github.com/make-all/tuya-local.git
+          git fetch upstream main
+
+      - name: Check for new upstream commits
+        id: check
+        run: |
+          if git merge-base --is-ancestor upstream/main HEAD; then
+            echo "Up-to-date with upstream — nothing to sync."
+            echo "needs_sync=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "needs_sync=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Prepare sync branch
+        if: steps.check.outputs.needs_sync == 'true'
+        id: prep
+        run: |
+          git checkout -B sync/upstream origin/main
+          if git rebase upstream/main; then
+            echo "Clean rebase."
+            echo "clean=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Rebase conflicts — aborting local rebase."
+            git rebase --abort
+            echo "clean=false" >> "$GITHUB_OUTPUT"
+
+            # Switch the sync branch to exactly match the upstream code
+            git checkout -B sync/upstream upstream/main
+          fi
+          git push origin sync/upstream --force
+
+      - name: Open or update PR
+        if: steps.check.outputs.needs_sync == 'true'
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if [ "${{ steps.prep.outputs.clean }}" = "true" ]; then
+            title="Sync from upstream"
+            body="Automated sync: the fork's changes rebased onto make-all/tuya-local. main is fast-forwarded to this branch once all CI checks pass."
+          else
+            title="Sync from upstream (CONFLICTS)"
+            body=$'Automated rebase onto make-all/tuya-local hit conflicts. Resolve them locally:\n\n```\ngit fetch origin\ngit fetch https://github.com/make-all/tuya-local.git main\ngit checkout -B sync/upstream origin/main\ngit rebase FETCH_HEAD   # resolve, git add, git rebase --continue\ngit push --force origin sync/upstream\n```\n\nmain is fast-forwarded to this branch once all CI checks pass.'
+          fi
+
+          number=$(gh pr list --head sync/upstream --base main --state open --json number --jq '.[0].number // empty')
+          if [ -z "$number" ]; then
+            gh pr create --title "$title" --body "$body" --base main --head sync/upstream
+          else
+            gh pr edit "$number" --title "$title" --body "$body"
+          fi
+
+      - name: Trigger native failure notification
+        if: steps.prep.outputs.clean == 'false'
+        run: |
+          echo "::error::Rebase conflicts detected. Manual resolution required."
+          exit 1
