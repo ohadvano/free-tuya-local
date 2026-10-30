@@ -7,6 +7,9 @@ on:
       - '**.py'
       - 'pyproject.toml'
   push:
+    branches:
+      - main
+      - sync/upstream
     paths:
       - '**.py'
       - 'pyproject.toml'
