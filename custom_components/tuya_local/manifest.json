@@ -1,15 +1,15 @@
 {
     "domain": "tuya_local",
-    "name": "Tuya Local",
+    "name": "Free Tuya Local",
     "codeowners": [
-        "@make-all"
+        "@ohadvano"
     ],
     "config_flow": true,
     "dependencies": [],
-    "documentation": "https://github.com/make-all/tuya-local",
+    "documentation": "https://github.com/ohadvano/free-tuya-local",
     "integration_type": "device",
     "iot_class": "local_push",
-    "issue_tracker": "https://github.com/make-all/tuya-local/issues",
+    "issue_tracker": "https://github.com/ohadvano/free-tuya-local/issues",
     "loggers": [
         "tuya_local",
         "tinytuya"
