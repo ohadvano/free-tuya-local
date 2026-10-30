@@ -6,6 +6,9 @@ on:
     paths:
       - 'custom_components/tuya_local/devices/*.yaml'
   push:
+    branches:
+      - main
+      - sync/upstream
     paths:
       - 'custom_components/tuya_local/devices/*.yaml'
 
