@@ -18,6 +18,7 @@
 - BVF CP1 heater
 - Caldo Up T fan heater
 - Calex Smart Convector heater
+- Castle Heaters NR series heater
 - Cecotec ReadyWarm 8400 Fan and 2000 Max Box Ceramic heaters
 - Cixi Jemell PTC-1919 PTC heater
 - Cleverio AR10/AR20 panel heaters
@@ -515,6 +516,7 @@
 - Cleverio AP100 air purifier
 - ComfortZone AP100 air purifier
 - Dayette AP409 air purifier
+- Djive Flowmate ARC Casual purifiying fan
 - Duux Bright air purifier
 - essentials portable air purifier
 - Himox H05 and H06 air purifiers
@@ -965,6 +967,7 @@ of device.
 - Brilliant Smart PIR outdoor sensor light switch
 - Brizlabs string lights
 - Calex S45 Clear E27 lightbulb
+- Cloudy Bay LFMC815SMWH dual-zone RGB+CCT ceiling light
 - Deltaco LED Strip (SH-LW5M)
 - Deta/Arlec motion sensor lights (DET100HA/DET102HA/MAL315HA)
 - Deta 6910HA series2 dimmer switch
@@ -1091,6 +1094,7 @@ of device.
 - Moes SCS80 Touch curtain switch with backlight and timing control
 - Moes WS-USR-2C double curtain switch with backlight
 - Moes WS-Y-EUC curtain switch with backlight and timing control
+- Novo Q1-3E-1.2 vertical blinds
 - Outdoor Inc zip blind
 - QS-WIFI-C01(BK) curtain module
 - QS-WIFI-C02 dual curtain module
